@@ -1,0 +1,6 @@
+descriptor:      [/home/ahammed_abir47/angular-app-gcp/app.yaml]
+source:          [/home/ahammed_abir47/angular-app-gcp]
+target project:  [tent-254302]
+target service:  [default]
+target version:  [20190927t215057]
+target url:      [https://tent-254302.appspot.com]
