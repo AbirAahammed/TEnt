@@ -9,8 +9,7 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent {
-  sidenavItems: string[] = ['Add a new vehicle to Track', 'Today\'s usage', 'Run Today\'s total'];
-  title = 'TEnt';
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
