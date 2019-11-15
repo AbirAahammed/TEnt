@@ -11,10 +11,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
+import {AppRoutingModule} from './app-routing/app-routing.module';
+import {RouterModule} from '@angular/router';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import {CreateDriverComponent} from './pages/create-driver/create-driver.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,9 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

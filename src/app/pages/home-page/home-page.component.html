@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="over">
     <mat-toolbar>Menu</mat-toolbar>
@@ -21,6 +21,6 @@
       <span>{{title}}</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <router-outlet name="home"></router-outlet>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
