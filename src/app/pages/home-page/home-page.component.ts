@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import {AuthService} from '../../auth/auth.service';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -15,9 +17,16 @@ export class HomePageComponent implements OnInit {
       map(result => result.matches),
       shareReplay()
     );
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver,
+              private authService: AuthService,
+              private router: Router) {}
 
-
+  public logout() {
+    console.log(this.authService.isLogged());
+    this.authService.logout();
+    this.router.navigate(['login'], { replaceUrl: true });
+    console.log(this.authService.isLogged());
+  }
   ngOnInit() {
   }
 

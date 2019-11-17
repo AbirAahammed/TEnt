@@ -9,7 +9,7 @@ import {
   MatToolbarModule,
   MatButtonModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule, MatCardModule
 } from '@angular/material';
 
 
@@ -26,7 +26,8 @@ import {
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ]
 })
 export class HomePageModule { }

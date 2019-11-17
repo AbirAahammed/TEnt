@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {LoginModule} from '../pages/login/login.module';
 import {SidenavComponent} from '../sidenav/sidenav.component';
 import {CreateDriverComponent} from '../pages/create-driver/create-driver.component';
+import {AuthGuard} from '../auth/auth.guard';
 // ANGULAR 7
 // const routes: Routes = [{
 //   path: '',
@@ -11,13 +12,23 @@ import {CreateDriverComponent} from '../pages/create-driver/create-driver.compon
 // }];
 // ANGULAR 8
 const routes: Routes = [{
-  path: 'log',
+  path: '',
   loadChildren: () =>
     import('../pages/login/login.module').then(
       m => m.LoginModule
     )
   },
-  { path: 'home', loadChildren: () => import(`../pages/home-page/home-page.module`).then(m => m.HomePageModule) }
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('../pages/login/login.module').then(
+        m => m.LoginModule
+      )
+  },
+  { path: 'home',
+    loadChildren: () => import(`../pages/home-page/home-page.module`).then(m => m.HomePageModule),
+    canActivate: [AuthGuard]
+  }
 ];
 
 @NgModule({
