@@ -9,8 +9,9 @@ import {
   MatToolbarModule,
   MatButtonModule,
   MatSidenavModule,
-  MatListModule, MatCardModule
+  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule
 } from '@angular/material';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -27,7 +28,10 @@ import {
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
   ]
 })
 export class HomePageModule { }

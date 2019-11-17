@@ -13,8 +13,6 @@ import { MatListModule } from '@angular/material/list';
 
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {RouterModule} from '@angular/router';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-import {CreateDriverComponent} from './pages/create-driver/create-driver.component';
 
 @NgModule({
   declarations: [

@@ -1,15 +1,32 @@
-<mat-card class="login-card">
-  <mat-card-title>
-    Create a Driver
-  </mat-card-title>
-  <mat-card-content>
 
+<div class="full-page">
+  <mat-card class="create-driver-card">
+    <mat-card-title>
+      Create a new Driver
+    </mat-card-title>
+    <mat-card-content>
+      <table class="full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="full-width">
+          <input name="first-name" matInput [(ngModel)]="firstName"  placeholder="First name">
+        </mat-form-field></td>
+        <td><mat-form-field class="full-width">
+          <input name="middle-name" matInput [(ngModel)]="middleName" placeholder="Middle name">
+        </mat-form-field></td>
+      </tr>
+        <tr>
+          <td><mat-form-field class="full-width">
+            <input name="last-name" [(ngModel)]="lastName"matInput placeholder="Last Name">
+          </mat-form-field></td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary"
+              class="create-driver-button" (click)="createDriver(firstName, middleName, lastName)"
+              type="submit">
+        Create
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
 
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button color="primary"
-            class="login-field" type="submit">
-      CREATE
-    </button>
-  </mat-card-actions>
-</mat-card>

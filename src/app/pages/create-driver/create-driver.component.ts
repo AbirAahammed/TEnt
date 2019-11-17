@@ -6,9 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-driver.component.css']
 })
 export class CreateDriverComponent implements OnInit {
+  firstName: string;
+  middleName: string;
+  lastName: string;
 
   constructor() { }
 
+  createDriver(firstName, middleName, lastName) {
+    console.log('First Name: ' + firstName);
+    console.log('Middle Name: ' + middleName);
+    console.log('Last Name: ' + lastName);
+  }
   ngOnInit() {
   }
 
