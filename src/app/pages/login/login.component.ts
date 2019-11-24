@@ -8,7 +8,6 @@ import {AuthService} from '../../auth/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   email: string;
   password: string;
   errorMessage: string;
@@ -22,7 +21,6 @@ export class LoginComponent implements OnInit {
     }
   }
   public async login(email: string, password: string) {
-    console.log(this.authService.isLogged());
     try {
       const url = (await this.authService.mockLogin(
         email,
@@ -33,8 +31,6 @@ export class LoginComponent implements OnInit {
       this.errorMessage = 'Wrong Credentials!';
       console.error('Unable to Login!\n', e);
     }
-    console.log(this.authService.isLogged());
-
   }
 
   public navigateTo(url?: string) {

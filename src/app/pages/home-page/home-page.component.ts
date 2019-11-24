@@ -22,10 +22,8 @@ export class HomePageComponent implements OnInit {
               private router: Router) {}
 
   public logout() {
-    console.log(this.authService.isLogged());
     this.authService.logout();
     this.router.navigate(['login'], { replaceUrl: true });
-    console.log(this.authService.isLogged());
   }
   ngOnInit() {
   }

@@ -1,4 +1,4 @@
-import { Storage } from './storage.model';
+import { StorageKey } from './storage.model';
 
 describe('Storage', () => {
   it('should create an instance', () => {

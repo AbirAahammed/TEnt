@@ -13,7 +13,7 @@ import { MatListModule } from '@angular/material/list';
 
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {RouterModule} from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,8 @@ import {RouterModule} from '@angular/router';
     MatIconModule,
     MatListModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
