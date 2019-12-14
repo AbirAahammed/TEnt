@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomePageRoutingModule } from './home-page-routing.module';
-import {CreateDriverComponent} from '../create-driver/create-driver.component';
+import {CreateDriverComponent} from '../../components/create-driver/create-driver.component';
 import {HomePageComponent} from './home-page.component';
 import {
   MatIconModule,
   MatToolbarModule,
   MatButtonModule,
   MatSidenavModule,
-  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule
+  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatTableModule
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 
@@ -31,7 +31,8 @@ import {FormsModule} from '@angular/forms';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ]
 })
 export class HomePageModule { }

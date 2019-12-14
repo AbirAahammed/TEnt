@@ -24,4 +24,8 @@ export class CrudDriverService extends CrudService {
     return await this.post(this.body, 'driver');
   }
 
+  public  async getDrivers() {
+    return await this.get('driver');
+  }
+
 }

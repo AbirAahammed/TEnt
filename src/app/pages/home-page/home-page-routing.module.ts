@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CreateDriverComponent} from '../create-driver/create-driver.component';
+import {CreateDriverComponent} from '../../components/create-driver/create-driver.component';
 import {HomePageComponent} from './home-page.component';
 
 

@@ -14,14 +14,14 @@ export abstract class CrudService {
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        'Access-Control-Allow-Headers': 'Content-Type',
         'Access-Control-Allow-Origin': '*'
       });
       const options = { headers };
-      console.log(body);
       response = await this.http
         .post(`${this.url}${endpoint}`, body, options)
         .toPromise();
+      console.log(body);
+
     } catch (error) {
       console.log('ERROR');
       response = this.errorHandler('POST', error, endpoint);
@@ -29,13 +29,31 @@ export abstract class CrudService {
     return response;
   }
 
+  public async get(endpoint: string): Promise<string> {
+    let response = null;
+    try {
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      });
+      const options = { headers };
+      response = await this.http
+        .get(`${this.url}${endpoint}`, options)
+        .toPromise();
+    } catch (error) {
+      console.log('ERROR');
+      response = this.errorHandler('GET', error, endpoint);
+    }
+    return response;
+  }
   public errorHandler(
     method: string,
     error: HttpErrorResponse,
     endpoint: string
   ): Promise<never> {
     console.error(
-      `Error occurred during ${method} ${this.url}/${endpoint}`,
+      `Error occurred during ${method} ${this.url}${endpoint}`,
       error,
     );
     return Promise.reject(error);
