@@ -14,10 +14,14 @@ import { MatListModule } from '@angular/material/list';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import {MatCardModule, MatDialogModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import {AddDriverPopupComponent} from './components/create-driver/add-driver-popup/add-driver-popup.component';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
+    AddDriverPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +34,15 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddDriverPopupComponent]
 })
 export class AppModule { }

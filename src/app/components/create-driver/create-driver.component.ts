@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {DriverBo} from '../../data-object/driver/driver-bo';
 import {CrudDriverService} from '../../core/services/driver/crud-driver.service';
+import {MatDialog} from '@angular/material/dialog';
+import {AddDriverPopupComponent} from './add-driver-popup/add-driver-popup.component';
 export interface PeriodicElement {
   id: number;
   firstName: string;
@@ -34,7 +36,7 @@ export class CreateDriverComponent implements OnInit {
   dataSource: string;
   // dataSource = [{position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   //   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'}];
-  constructor(private crudDriverService: CrudDriverService) { }
+  constructor(private crudDriverService: CrudDriverService, public dialog: MatDialog) { }
 
   async createDriver(firstName, middleName, lastName) {
     console.log('First Name: ' + firstName);
@@ -52,6 +54,17 @@ export class CreateDriverComponent implements OnInit {
 
   getAllDrivers() {
     return this.crudDriverService.getDrivers();
+  }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddDriverPopupComponent, {
+      width: '500px',
+      data: {Test: 'Pop'}
+    });
+
+    dialogRef.afterClosed().subscribe(async result => {
+      console.log('The dialog was closed');
+      this.dataSource = await this.crudDriverService.getDrivers();
+    });
   }
 
 }
