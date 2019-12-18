@@ -14,3 +14,10 @@ td {
 table {
   width: 100%;
 }
+.create-button {
+  position: fixed;
+  display: block;
+  bottom: 10%;
+  right: 100px;
+  margin: -100px 0 0 0;
+}

@@ -14,7 +14,7 @@ export class CrudDriverService extends CrudService {
     super(http);
   }
   public async createDriver(driver: DriverBo) {
-    console.log(driver);
+    console.log('Outgoing createDriver request');
     this.body = '{\n' +
       '  "driverID": 0,\n' +
       `  "firstName": "${driver.firstName}",\n` +
@@ -25,6 +25,7 @@ export class CrudDriverService extends CrudService {
   }
 
   public  async getDrivers() {
+    console.log('Outgoing createDriver request');
     return await this.get('driver');
   }
 
