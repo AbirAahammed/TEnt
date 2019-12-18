@@ -44,16 +44,9 @@ export class CreateDriverComponent implements OnInit {
     console.log('Last Name: ' + lastName);
     this.driver = new DriverBo(firstName, middleName, lastName);
     console.log(await this.crudDriverService.createDriver(this.driver));
-    console.log(await this.crudDriverService.getDrivers());
-    console.log(this.dataSource);
-    this.dataSource = await this.crudDriverService.getDrivers();
   }
   async ngOnInit() {
     this.dataSource = await this.crudDriverService.getDrivers();
-  }
-
-  getAllDrivers() {
-    return this.crudDriverService.getDrivers();
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(AddDriverPopupComponent, {
@@ -62,7 +55,6 @@ export class CreateDriverComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(async result => {
-      console.log('The dialog was closed');
       this.dataSource = await this.crudDriverService.getDrivers();
     });
   }
