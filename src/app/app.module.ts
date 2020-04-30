@@ -17,6 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule, MatDialogModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import {AddDriverPopupComponent} from './components/create-driver/add-driver-popup/add-driver-popup.component';
 import {FormsModule} from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import {CreateDriverModule} from './components/create-driver/create-driver.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,10 +43,16 @@ import {FormsModule} from '@angular/forms';
     MatCardModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    CreateDriverModule
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [
+  ],
   entryComponents: [AddDriverPopupComponent]
 })
 export class AppModule { }

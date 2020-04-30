@@ -13,6 +13,7 @@ export class CreateDriverComponent implements OnInit {
   driver: DriverBo;
   displayedColumns: string[] = ['driverID', 'firstName', 'middleName', 'lastName'];
   columnNames: string[] = ['ID', 'First Name', 'Middle Name', 'Last Name'];
+  popUpCOmponent: any = AddDriverPopupComponent;
   dataSource: string;
   // dataSource = [{position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   //   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'}];
@@ -26,7 +27,9 @@ export class CreateDriverComponent implements OnInit {
       width: '500px'});
 
     dialogRef.afterClosed().subscribe(async result => {
+      console.log('Item closed, getting drivers');
       this.dataSource = await this.crudDriverService.getDrivers();
+      console.log('Drivers returned');
     });
   }
 

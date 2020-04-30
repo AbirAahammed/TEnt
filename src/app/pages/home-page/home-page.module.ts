@@ -12,6 +12,7 @@ import {
   MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatTableModule
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
+import {AppModule} from '../../app.module';
 
 
 

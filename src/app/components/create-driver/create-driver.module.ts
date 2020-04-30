@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CreateDriverRoutingModule } from './create-driver-routing.module';
 import {MatDialogModule} from '@angular/material/dialog';
+import {CrudInterfaceComponent} from '../../core/interface/crud-interface/crud-interface.component';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     CommonModule,
     CreateDriverRoutingModule,
     MatDialogModule
-  ]
+  ],
+  exports: []
 })
 export class CreateDriverModule { }
