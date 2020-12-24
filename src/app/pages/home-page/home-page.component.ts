@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  sidenavItems: string[] = ['Add a Driver', 'Add a Vehicle', 'Add a Company',  'Generate Bill'];
+  sidenavItems: string[] = ['Drivers', 'Vehicles', 'Companies',  'Bills'];
   title = 'TEnt';
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
