@@ -28,6 +28,7 @@ export interface PeriodicElement {
   styleUrls: ['./create-driver.component.css']
 })
 export class CreateDriverComponent implements OnInit {
+  id: number;
   firstName: string;
   middleName: string;
   lastName: string;
