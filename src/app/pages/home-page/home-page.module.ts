@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomePageRoutingModule } from './home-page-routing.module';
-import {CreateDriverComponent} from '../../components/create-driver/create-driver.component';
+import {DriverComponent} from '../../components/driver/driver.component';
 import {HomePageComponent} from './home-page.component';
 import {
   MatIconModule,
@@ -18,7 +18,7 @@ import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     HomePageComponent,
-    CreateDriverComponent
+    DriverComponent
   ],
   imports: [
     CommonModule,

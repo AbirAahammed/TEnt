@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CreateDriverRoutingModule } from './create-driver-routing.module';
+import { DriverRoutingModule } from './driver-routing.module';
 import {MatDialogModule} from '@angular/material/dialog';
 
 
@@ -9,8 +9,8 @@ import {MatDialogModule} from '@angular/material/dialog';
   declarations: [],
   imports: [
     CommonModule,
-    CreateDriverRoutingModule,
+    DriverRoutingModule,
     MatDialogModule
   ]
 })
-export class CreateDriverModule { }
+export class DriverModule { }

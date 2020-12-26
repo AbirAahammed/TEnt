@@ -15,7 +15,7 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule, MatDialogModule, MatFormFieldModule, MatInputModule} from '@angular/material';
-import {AddDriverPopupComponent} from './components/create-driver/add-driver-popup/add-driver-popup.component';
+import {AddDriverPopupComponent} from './components/driver/add-driver-popup/add-driver-popup.component';
 import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [

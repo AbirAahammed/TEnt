@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginModule} from '../pages/login/login.module';
 import {SidenavComponent} from '../components/sidenav/sidenav.component';
-import {CreateDriverComponent} from '../components/create-driver/create-driver.component';
+import {DriverComponent} from '../components/driver/driver.component';
 import {AuthGuard} from '../auth/auth.guard';
 // ANGULAR 7
 // const routes: Routes = [{
