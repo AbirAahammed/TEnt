@@ -17,11 +17,13 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule, MatDialogModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import {AddDriverPopupComponent} from './components/driver/add-driver-popup/add-driver-popup.component';
 import {FormsModule} from '@angular/forms';
+import { CompanyComponent } from './components/company/company.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    AddDriverPopupComponent
+    AddDriverPopupComponent,
+    CompanyComponent
   ],
   imports: [
     BrowserModule,
