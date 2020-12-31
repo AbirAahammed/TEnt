@@ -18,12 +18,16 @@ import {MatCardModule, MatDialogModule, MatFormFieldModule, MatInputModule} from
 import {AddDriverPopupComponent} from './components/driver/add-driver-popup/add-driver-popup.component';
 import {FormsModule} from '@angular/forms';
 import { CompanyComponent } from './components/company/company.component';
+// import { BillsComponent } from './components/bills/bills.component';
+import { BillPageComponent } from './pages/bill-page/bill-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     AddDriverPopupComponent,
-    CompanyComponent
+    CompanyComponent,
+    // BillsComponent,
+    BillPageComponent
   ],
   imports: [
     BrowserModule,

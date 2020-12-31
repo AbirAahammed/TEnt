@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { HomePageRoutingModule } from './home-page-routing.module';
 import {DriverComponent} from '../../components/driver/driver.component';
 import {HomePageComponent} from './home-page.component';
+import {BillsComponent} from '../../components/bills/bills.component';
+
 import {
   MatIconModule,
   MatToolbarModule,
@@ -18,7 +20,8 @@ import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     HomePageComponent,
-    DriverComponent
+    DriverComponent,
+    BillsComponent
   ],
   imports: [
     CommonModule,
