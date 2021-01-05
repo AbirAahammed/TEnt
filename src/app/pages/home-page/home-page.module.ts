@@ -13,6 +13,7 @@ import {
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import { BillsComponent } from 'src/app/components/bills/bills.component';
+import { BillGenComponent } from 'src/app/components/bills/bill-gen/bill-gen.component';
 
 
 
@@ -20,7 +21,8 @@ import { BillsComponent } from 'src/app/components/bills/bills.component';
   declarations: [
     HomePageComponent,
     DriverComponent,
-    BillsComponent
+    BillsComponent,
+    BillGenComponent
   ],
   imports: [
     CommonModule,

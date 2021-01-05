@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   }
 
   public navigateTo(url?: string) {
-    url = url || 'drivers';
+    url = url || 'Drivers';
     this.router.navigate([url], { replaceUrl: true });
   }
 
