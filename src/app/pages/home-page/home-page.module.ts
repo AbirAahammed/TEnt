@@ -12,13 +12,15 @@ import {
   MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatTableModule
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
+import { BillsComponent } from 'src/app/components/bills/bills.component';
 
 
 
 @NgModule({
   declarations: [
     HomePageComponent,
-    DriverComponent
+    DriverComponent,
+    BillsComponent
   ],
   imports: [
     CommonModule,
