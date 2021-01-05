@@ -5,11 +5,10 @@ import { BillsRoutingModule } from './bills-routing.module';
 
 
 @NgModule({
-  declarations: [BillGenComponent],
+  declarations: [],
   imports: [
     CommonModule,
     BillsRoutingModule,
-    
   ]
 })
 export class BillsModule { }

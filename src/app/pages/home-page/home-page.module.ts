@@ -13,7 +13,8 @@ import {
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import { BillsComponent } from 'src/app/components/bills/bills.component';
-import { BillGenComponent } from 'src/app/components/bills/bill-gen/bill-gen.component';
+import { BillsModule } from 'src/app/components/bills/bills.module';
+import { BillGenModule } from 'src/app/components/bills/bill-gen/bill-gen.module';
 
 
 
@@ -22,7 +23,6 @@ import { BillGenComponent } from 'src/app/components/bills/bill-gen/bill-gen.com
     HomePageComponent,
     DriverComponent,
     BillsComponent,
-    BillGenComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +36,9 @@ import { BillGenComponent } from 'src/app/components/bills/bill-gen/bill-gen.com
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    BillsModule,
+    BillGenModule
   ]
 })
 export class HomePageModule { }

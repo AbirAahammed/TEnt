@@ -18,6 +18,7 @@ import {MatCardModule, MatDialogModule, MatFormFieldModule, MatInputModule} from
 import {AddDriverPopupComponent} from './components/driver/add-driver-popup/add-driver-popup.component';
 import {FormsModule} from '@angular/forms';
 import { CompanyComponent } from './components/company/company.component';
+import { BillsModule } from './components/bills/bills.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,7 @@ import { CompanyComponent } from './components/company/company.component';
     MatCardModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
