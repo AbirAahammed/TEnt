@@ -12,20 +12,20 @@ import {AuthGuard} from '../auth/auth.guard';
 // }];
 // ANGULAR 8
 const routes: Routes = [{
-  // path: '',
-  // loadChildren: () =>
-  //   import('../pages/login/login.module').then(
-  //     m => m.LoginModule
-  //   )
-  // },
-  // {
+  path: '',
+  loadChildren: () =>
+    import('../pages/login/login.module').then(
+      m => m.LoginModule
+    )
+  },
+  {
     path: 'login',
     loadChildren: () =>
       import('../pages/login/login.module').then(
         m => m.LoginModule
       )
   },
-  { path: '',
+  { path: 'home',
     loadChildren: () => import(`../pages/home-page/home-page.module`).then(m => m.HomePageModule),
     canActivate: [AuthGuard]
   }
