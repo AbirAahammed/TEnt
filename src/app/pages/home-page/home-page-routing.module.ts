@@ -9,8 +9,8 @@ const routes: Routes = [
   {
     path: '', component: HomePageComponent, children : [
       { path: 'createdriver', component: DriverComponent},
-      { path: 'drivers', component: DriverComponent},
-      { path: 'bills', component: BillsComponent}
+      { path: 'Drivers', component: DriverComponent},
+      { path: 'Bills', component: BillsComponent}
     ]
   }
 ];
