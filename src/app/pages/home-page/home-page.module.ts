@@ -13,7 +13,6 @@ import {
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import { BillsComponent } from 'src/app/components/bills/bills.component';
-import { BillsModule } from 'src/app/components/bills/bills.module';
 import { BillGenModule } from 'src/app/components/bills/bill-gen/bill-gen.module';
 
 
@@ -37,7 +36,6 @@ import { BillGenModule } from 'src/app/components/bills/bill-gen/bill-gen.module
     MatInputModule,
     FormsModule,
     MatTableModule,
-    BillsModule,
     BillGenModule
   ]
 })
