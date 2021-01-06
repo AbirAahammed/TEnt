@@ -9,7 +9,7 @@ import {
   MatToolbarModule,
   MatButtonModule,
   MatSidenavModule,
-  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatTableModule
+  MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatTableModule, MatExpansionModule
 } from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import { BillsComponent } from 'src/app/components/bills/bills.component';
@@ -36,7 +36,8 @@ import { BillGenModule } from 'src/app/components/bills/bill-gen/bill-gen.module
     MatInputModule,
     FormsModule,
     MatTableModule,
-    BillGenModule
+    BillGenModule,
+    MatExpansionModule
   ]
 })
 export class HomePageModule { }
